@@ -5,8 +5,8 @@ export default function Searchbar() {
   return (
     <div>
       <div className="SearchBar">
-        <img src={searchB} alt="Search Bar" id="searchB"></img>
         <input type="text" id="search" placeholder="search"></input>
+        <img src={searchB} alt="Search Bar" id="searchB"></img>
       </div>
     </div>
   );

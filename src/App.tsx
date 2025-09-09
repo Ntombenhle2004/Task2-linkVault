@@ -19,13 +19,13 @@ function App() {
           <Paragraphs name="Add link:" />
 
           <div className="myinputs">
-            <Inputs text="Tag" />
-            <Inputs text="Link" />
-            <Inputs text="Title" />
+            <Inputs text="Tag" /> <br/>
+            <Inputs text="Link" /> <br/>
+            <Inputs text="Title" /> <br/>
             <Inputs text="Description" id="descrip" />
           </div>
           <div className="AddlinkBtn">
-            <Buttons name="SAVE" id="save" colors="green" />
+            <Buttons name="SAVE" id="save" colors="green" /> <br/>
             <Buttons name="CANCEL" id="Cancel" colors="Red" />
           </div>
         </div>
@@ -34,7 +34,7 @@ function App() {
           <Paragraphs name="Saved links:" />
           <div className="MyOutputs">
             <Outputs name="outpt" />
-            <Buttons name="UPDATE" id="update" colors="green" />
+            <Buttons name="UPDATE" id="update" colors="green" /><br/>
             <Buttons name="DELETE" id="delete" colors="Red" />
           </div>
         </div>
