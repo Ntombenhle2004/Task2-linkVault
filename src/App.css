@@ -81,7 +81,7 @@ table, th, td{
   }
   table{
     width: 90%;
-    margin-top: 1rem;
+    margin-top: 0.9rem;
   }
   #outputBtn{
     display: flex;
