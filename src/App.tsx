@@ -1,5 +1,6 @@
 import './App.css'
 import Buttons from './components/buttons'
+import Footer from './components/footer'
 import Heading from './components/heading'
 import Inputs from './components/Inputs'
 import Outputs from './components/outputs'
@@ -11,8 +12,8 @@ function App() {
 
   return (
     <>
+      <Heading />
       <div className="mySection">
-        <Heading />
         <Searchbar />
 
         <div className="addlink">
@@ -20,7 +21,7 @@ function App() {
           <div className="myinputs">
             <Inputs text="Link" id="link" /> <br />
             <Inputs text="Title" id="title" /> <br />
-            <Inputs text="Description" id="descrip" /> <br/>
+            <Inputs text="Description" id="descrip" /> <br />
             <Inputs text="Tag" id="tag" /> <br />
           </div>
 
@@ -35,6 +36,9 @@ function App() {
             <Outputs />
           </div>
         </div>
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </>
   );

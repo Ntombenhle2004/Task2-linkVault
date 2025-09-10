@@ -21,7 +21,6 @@ export default function Outputs() {
           <td>jhbj</td>
           <td id="outputBtn">
             <Buttons name="UPDATE" id="update" colors="green" />
-
             <Buttons name="DELETE" id="delete" colors="Red" />
           </td>
         </tr>
