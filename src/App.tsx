@@ -17,25 +17,22 @@ function App() {
 
         <div className="addlink">
           <Paragraphs name="Add link:" />
-
           <div className="myinputs">
-            <Inputs text="Tag" /> <br/>
-            <Inputs text="Link" /> <br/>
-            <Inputs text="Title" /> <br/>
-            <Inputs text="Description" id="descrip" />
+            <Inputs text="Link" id="link" /> <br />
+            <Inputs text="Title" id="title" /> <br />
+            <Inputs text="Description" id="descrip" /> <br/>
+            <Inputs text="Tag" id="tag" /> <br />
           </div>
+
           <div className="AddlinkBtn">
-            <Buttons name="SAVE" id="save" colors="green" /> <br/>
+            <Buttons name="SAVE" id="save" colors="green" /> <br />
             <Buttons name="CANCEL" id="Cancel" colors="Red" />
           </div>
         </div>
 
         <div className="savedlinks">
-          <Paragraphs name="Saved links:" />
           <div className="MyOutputs">
-            <Outputs name="outpt" />
-            <Buttons name="UPDATE" id="update" colors="green" /><br/>
-            <Buttons name="DELETE" id="delete" colors="Red" />
+            <Outputs />
           </div>
         </div>
       </div>

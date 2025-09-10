@@ -1,6 +1,6 @@
 interface Input{
 text: string,
-id?: string,
+id: string,
 }
 
 export default function Inputs({text, id,}:Input) {
