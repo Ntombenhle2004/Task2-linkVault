@@ -54,6 +54,9 @@ p{
 }
 .myinputs{
   padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+
 }
 
 input{
@@ -62,10 +65,9 @@ input{
   border-radius: 10px;
   background-color: #D9D9D9;
   border: none;
+  
 }
-#descrip{
 
-}
 button{
  padding: 0.5rem;
  border-radius: 6px;
