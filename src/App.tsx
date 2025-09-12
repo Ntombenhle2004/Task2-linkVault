@@ -1,10 +1,7 @@
-
 import { useState, useEffect } from "react";
 import "./App.css";
-// import Buttons from "./components/buttons";
 import Footer from "./components/footer";
 import Heading from "./components/heading";
-// import Inputs from "./components/Inputs";
 import Outputs from "./components/outputs";
 import Paragraphs from "./components/paragraphs";
 import Searchbar from "./components/searchbar";
@@ -24,13 +21,11 @@ function App() {
   const [editing, setEditing] = useState<Link | null>(null);
   const [currentlink, setCurrentLink] = useState<Link>();
 
-  // form state
   const [title, setTitle] = useState("");
   const [link, setLink] = useState("");
   const [description, setDescription] = useState("");
   const [tags, setTags] = useState("");
 
-  // load saved links from localStorage when app starts
   useEffect(() => {
     setLinks(getLinks());
   }, []);
@@ -44,7 +39,6 @@ function App() {
     return exists;
   };
 
-  // save handler
   const handleSave = () => {
     if (!title || !link || !description || !tags) {
       alert("information is incomplite!");
@@ -96,14 +90,13 @@ function App() {
       setLinks(getLinks());
     }
 
-    // clear form
     setTitle("");
     setLink("");
     setDescription("");
     setTags("");
   };
 
-  // edit handler
+
   const handleEdit = (link: Link) => {
     setEditing(link);
     setTitle(link.title);
@@ -119,7 +112,6 @@ function App() {
     setCurrentLink(currentLinkdetails);
   };
 
-  // delete handler
   const handleDelete = (id: string) => {
     if (window.confirm("Are you sure you want to delete this link?")) {
       deleteLink(id);
@@ -127,7 +119,6 @@ function App() {
     }
   };
 
-  // filter by search
   const filteredLinks = links.filter(
     (l) =>
       l.title.toLowerCase().includes(search.toLowerCase()) ||

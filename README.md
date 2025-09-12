@@ -1,69 +1,123 @@
-# React + TypeScript + Vite
+# Task 2 - LinksVault
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**LinksVault** is a React + Vite application for saving, managing, editing, searching, and deleting links. It stores data locally in the browser using **LocalStorage** and includes validation to prevent duplicates and invalid URLs. The project is built with **React 19**, **TypeScript**, and **Vite**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+│── App.tsx
+│── App.css
+│
+├── components/
+│   ├── footer.tsx
+│   ├── heading.tsx
+│   ├── outputs.tsx
+│   ├── paragraphs.tsx
+│   ├── searchbar.tsx
+│   └── utils/
+│       ├── localStorageFunction.ts
+│       └── linkverify.ts
+│
+├── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Features
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Add new links** with title, description, and tags.  
+- **Update existing links** (with validation to prevent unchanged updates).  
+- **Delete links** with confirmation prompt.  
+- **Search functionality** (search by title, link, description, or tags).  
+- **LocalStorage integration** for persistent data storage.  
+- **Input validation**:
+  - Ensures all fields are filled.  
+  - Ensures URLs are valid.  
+  - Prevents duplicate links.  
+
+---
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Ntombenhle2004/Task2-linkVault.git
+   cd task2-linksvault
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
+
+   The app will be available at: [http://localhost:5173](http://localhost:5173)
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+5. **Preview production build**
+   ```bash
+   npm run preview
+   ```
+
+---
+
+## Dependencies
+
+```json
+"dependencies": {
+  "react": "^19.1.1",
+  "react-dom": "^19.1.1",
+  "react-icons": "^5.5.0"
+},
+"devDependencies": {
+  "@eslint/js": "^9.33.0",
+  "@types/react": "^19.1.10",
+  "@types/react-dom": "^19.1.7",
+  "@vitejs/plugin-react": "^5.0.0",
+  "eslint": "^9.33.0",
+  "eslint-plugin-react-hooks": "^5.2.0",
+  "eslint-plugin-react-refresh": "^0.4.20",
+  "globals": "^16.3.0",
+  "typescript": "~5.8.3",
+  "typescript-eslint": "^8.39.1",
+  "vite": "^7.1.2"
+}
 ```
+
+---
+
+## Usage
+
+1. **Add a link** by filling out all inputs (Link, Title, Description, Tag) and clicking **Save**.  
+2. **Edit a link** by clicking the edit button (pencil icon) → modify → click **Update**.  
+3. **Delete a link** by clicking the delete button (trash icon) → confirm.  
+4. **Search links** using the search bar (filters across title, link, description, and tags).  
+
+---
+
+## Utility Functions
+
+- **`getLinks()`** → retrieves all saved links from LocalStorage.  
+- **`addLink(link: Link)`** → saves a new link.  
+- **`updateLink(link: Link)`** → updates an existing link.  
+- **`deleteLink(id: string)`** → removes a link.  
+- **`isValidURL(url: string)`** → validates URL format.  
+
+---
+
+## License
+
+This project is for **educational purposes**. You may use, modify, and distribute it freely.  
+
+---
