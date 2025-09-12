@@ -26,7 +26,7 @@ src/
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Add new links** with title, description, and tags.  
 - **Update existing links** (with validation to prevent unchanged updates).  
