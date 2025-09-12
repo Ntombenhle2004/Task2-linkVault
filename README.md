@@ -1,3 +1,5 @@
+<img src="https://socialify.git.ci/Ntombenhle2004/Task2-linkVault/image?language=1&owner=1&name=1&stargazers=1&theme=Light" alt="Task2-linkVault" width="640" height="320" />
+
 # Task 2 - LinksVault
 
 **LinksVault** is a React + Vite application for saving, managing, editing, searching, and deleting links. It stores data locally in the browser using **LocalStorage** and includes validation to prevent duplicates and invalid URLs. The project is built with **React 19**, **TypeScript**, and **Vite**.
@@ -40,7 +42,7 @@ src/
 
 ---
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 1. **Clone the repository**
    ```bash
