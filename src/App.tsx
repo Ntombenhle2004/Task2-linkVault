@@ -94,6 +94,7 @@ function App() {
     setLink("");
     setDescription("");
     setTags("");
+    alert("link saved")
   };
 
 
@@ -116,6 +117,7 @@ function App() {
     if (window.confirm("Are you sure you want to delete this link?")) {
       deleteLink(id);
       setLinks(getLinks());
+      alert("successfully deleted")
     }
   };
 
