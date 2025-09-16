@@ -28,6 +28,13 @@ src/
 
 ---
 
+## Figma link
+
+```
+https://www.figma.com/design/LKJ5R13QhuhNRPDvSlaZOr/React-ts-task2?node-id=0-1&p=f&t=PsrlCDFAQaosaTeA-0
+```
+---
+
 ## Features
 
 - **Add new links** with title, description, and tags.  
