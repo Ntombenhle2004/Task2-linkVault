@@ -32,24 +32,29 @@ export default function Outputs({ links, onEdit, onDelete }: Props) {
               <td>{l.title}</td>
               <td>{l.description}</td>
               <td>{l.tags}</td>
-              <td >
+              <td>
                 <div id="outputBtn">
-                <button
-                  style={{ backgroundColor: "green" }}
-                  onClick={() => onEdit(l)}
-                >
-                  Update
-                </button>
-                <button
-                  style={{ backgroundColor: "red" }}
-                  onClick={() => onDelete(l.id!)}
-                >
-                  Delete
-                </button>
+                  <button
+                    style={{ backgroundColor: "green" }}
+                    onClick={() => onEdit(l)}
+                  >
+                    Update
+                  </button>
+                  <button
+                    style={{ backgroundColor: "red" }}
+                    onClick={() => onDelete(l.id!)}
+                  >
+                    Delete
+                  </button>
                 </div>
               </td>
             </tr>
           ))}
+          {links.length === 0 && (
+            <tr>
+              <td colSpan={6}>No links found, add some!</td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>
