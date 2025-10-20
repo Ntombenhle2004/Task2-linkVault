@@ -5,15 +5,15 @@ import Heading from "./components/heading";
 import Outputs from "./components/outputs";
 import Paragraphs from "./components/paragraphs";
 import Searchbar from "./components/searchbar";
-import type { Link } from "./components/utils/localStorageFunction";
+import type { Link } from "./utils/localStorageFunction";
 
 import {
   getLinks,
   addLink,
   updateLink,
   deleteLink,
-} from "./components/utils/localStorageFunction";
-import isValidURL from "./components/utils/linkverify";
+} from "./utils/localStorageFunction";
+import isValidURL from "./utils/linkverify";
 
 function App() {
   const [links, setLinks] = useState<Link[]>([]);
@@ -57,12 +57,12 @@ function App() {
     };
 
     if (editing) {
-      console.log(currentlink,newLink)
+      console.log(currentlink, newLink);
       const isSame =
         currentlink!.title === newLink.title &&
         currentlink!.link === newLink.link &&
         currentlink!.description === newLink.description &&
-        currentlink!.tags === newLink.tags; 
+        currentlink!.tags === newLink.tags;
 
       if (isSame) {
         alert("No changes made...please make changes to update!!");
@@ -94,9 +94,8 @@ function App() {
     setLink("");
     setDescription("");
     setTags("");
-    alert("link saved")
+    alert("link saved");
   };
-
 
   const handleEdit = (link: Link) => {
     setEditing(link);
@@ -104,7 +103,7 @@ function App() {
     setLink(link.link);
     setDescription(link.description);
     setTags(link.tags || "");
-    let currentLinkdetails : Link  = {
+    let currentLinkdetails: Link = {
       title: link.title,
       link: link.link,
       tags: link.tags,
@@ -117,7 +116,7 @@ function App() {
     if (window.confirm("Are you sure you want to delete this link?")) {
       deleteLink(id);
       setLinks(getLinks());
-      alert("successfully deleted")
+      alert("successfully deleted");
     }
   };
 

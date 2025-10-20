@@ -1,4 +1,4 @@
-import type { Link } from "../components/utils/localStorageFunction";
+import type { Link } from "../utils/localStorageFunction";
 
 interface Props {
   links: Link[];
@@ -60,4 +60,3 @@ export default function Outputs({ links, onEdit, onDelete }: Props) {
     </div>
   );
 }
-
